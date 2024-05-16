@@ -1,7 +1,7 @@
 import Item from "./Item"
 
 function Itemlist ({ productos }) {
-    console.log(productos)
+   
     return(
         <>
             {productos.map(producto => (

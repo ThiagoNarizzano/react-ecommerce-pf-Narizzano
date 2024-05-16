@@ -2,17 +2,17 @@ import Row from "react-bootstrap/Row"
 import Container from "react-bootstrap/esm/Container"
 import Itemlist from "./ItemList"
 import { useState, useEffect } from "react"
-import { json, useParams } from "react-router-dom"
+import { useParams } from "react-router-dom"
 
 
 function ItemListContainer () {
     const [items, setItems] = useState ([])
 
-    const { productID } = useParams()
+    const { ID } = useParams()
 
     useEffect(() => {
-        if (productID) {
-            fetch(`https://dummyjson.com/products/category/${productID}`)
+        if (ID) {
+            fetch(`https://dummyjson.com/products/category/${ID}`)
                 .then(res => res.json())
                 .then(json => setItems(console.log(json)))
         }
@@ -21,7 +21,7 @@ function ItemListContainer () {
                 .then(res => res.json())
                 .then(json => setItems(console.log(json)))
         }
-    }, [productID])
+    }, [ID])
 
     return (
         <Container fluid>

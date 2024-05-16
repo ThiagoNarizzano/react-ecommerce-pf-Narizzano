@@ -14,7 +14,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<ItemListContainer />} />
-        <Route path="/category/:productID" element={ <p />} />
+         <Route path="/category/:ID" element={ <p />} />
       </Routes>
     </BrowserRouter>
   
